@@ -1,0 +1,45 @@
+/* App.css */
+/* This file contains global styles and overrides for your portfolio. */
+
+/* Use a modern, clean font */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa; /* A light grey background for a clean look */
+  color: #212529; /* Standard dark text for readability */
+}
+
+/* Add spacing between sections for better visual separation */
+.section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #e9ecef; /* A subtle line to separate sections */
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
+
+/* Style for section headings */
+.section-title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #343a40;
+}
+
+/* Custom button styling to make them pop a bit more */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn-outline-light {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
