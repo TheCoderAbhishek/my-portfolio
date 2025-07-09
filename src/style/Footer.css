@@ -1,0 +1,53 @@
+/* components/Footer.css */
+/* This file contains the styles for your futuristic Footer. */
+
+.footer-section {
+  padding: 2rem 0;
+  background-color: #0d0d1a;
+  position: relative;
+  color: #a0a0a0;
+}
+
+/* The glowing gradient border on top, mirroring the navbar */
+.footer-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    #00f2fe,
+    #4facfe,
+    #a18cd1,
+    #fbc2eb,
+    #ff8cce
+  );
+  box-shadow: 0 0 10px #4facfe, 0 0 20px #a18cd1;
+  background-size: 200% 200%;
+  animation: gradient-animation 5s ease infinite;
+}
+
+/* Reusing the gradient animation from Navbar.css */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.footer-subtitle {
+  font-size: 0.9rem;
+  color: #707070;
+}
+
+.heart-icon {
+  color: #a18cd1;
+  text-shadow: 0 0 5px #a18cd1;
+}
