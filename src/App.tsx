@@ -2,6 +2,7 @@
 import NavbarComponent from "./components/NavbarComponent";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import { Experience } from "./components/Experience";
 import { Container } from "react-bootstrap";
 import "./App.css";
 
@@ -19,8 +20,8 @@ function App() {
         {/* A container for the rest of the sections to provide padding and alignment */}
         <Container className="py-5">
           <About />
-          {/* <Experience />
-          <Skills />
+          <Experience />
+          {/* <Skills />
           <Projects />
           <Contact /> */}
         </Container>
