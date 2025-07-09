@@ -62,7 +62,7 @@ const experienceData: ExperienceItem[] = [
   },
 ];
 
-export function Experience() {
+function Experience() {
   return (
     <section id="experience" className="experience-section">
       <Container>
@@ -101,3 +101,5 @@ export function Experience() {
     </section>
   );
 }
+
+export default Experience;

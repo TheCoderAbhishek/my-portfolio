@@ -1,0 +1,86 @@
+/* components/Skills.css */
+/* This file contains the styles for your icon-based Skills section. */
+
+.skills-section {
+  padding: 6rem 0;
+  position: relative;
+  background-color: #0d0d1a;
+}
+
+/* The holographic panel for each skill category */
+.skill-category-panel {
+  background: rgba(19, 23, 46, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.1);
+  height: 100%; /* Make panels in the same row equal height */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category-panel:hover {
+  border-color: rgba(0, 242, 254, 0.5);
+  box-shadow: 0 0 30px rgba(0, 242, 254, 0.2);
+}
+
+/* Title for each category */
+.category-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #00f2fe;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 0 5px rgba(0, 242, 254, 0.7);
+}
+
+/* Grid container for the skill items */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Individual skill item (icon + name) */
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: rgba(0, 242, 254, 0.05);
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  background-color: rgba(0, 242, 254, 0.15);
+  border-color: rgba(0, 242, 254, 0.5);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+}
+
+/* Styling for the icon */
+.skill-item svg {
+  color: #a18cd1; /* A secondary neon color for the icons */
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover svg {
+  color: #00f2fe; /* Primary neon color on hover */
+  filter: drop-shadow(0 0 5px #00f2fe);
+}
+
+/* Styling for the skill name */
+.skill-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #d0d0d0;
+  text-align: center;
+}

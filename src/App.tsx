@@ -2,7 +2,8 @@
 import NavbarComponent from "./components/NavbarComponent";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import { Experience } from "./components/Experience";
+import Experience from "./components/Experience";
+import Skills from "./components/Skills";
 import { Container } from "react-bootstrap";
 import "./App.css";
 
@@ -21,8 +22,8 @@ function App() {
         <Container className="py-5">
           <About />
           <Experience />
-          {/* <Skills />
-          <Projects />
+          <Skills />
+          {/* <Projects />
           <Contact /> */}
         </Container>
       </main>
