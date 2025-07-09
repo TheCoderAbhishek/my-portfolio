@@ -3,7 +3,7 @@
 
 /* Use a modern, clean font */
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: #f8f9fa; /* A light grey background for a clean look */
   color: #212529; /* Standard dark text for readability */
 }
@@ -30,16 +30,16 @@ body {
 
 /* Custom button styling to make them pop a bit more */
 .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  background-color: #007bff;
+  border-color: #007bff;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
+  background-color: #0056b3;
+  transform: translateY(-2px);
 }
 
 .btn-outline-light {
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
