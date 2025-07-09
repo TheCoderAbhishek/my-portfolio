@@ -1,0 +1,49 @@
+/* components/About.css */
+/* This file contains the styles for your futuristic About section. */
+
+.about-section {
+  padding: 6rem 0;
+  /* The main page background should be set globally in App.css */
+  position: relative;
+}
+
+/* The "holographic" panel containing the text */
+.about-panel {
+  /* Semi-transparent background with a subtle dark-blue tint */
+  background: rgba(19, 23, 46, 0.7);
+
+  /* Glassmorphism blur effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  padding: 3rem;
+  border-radius: 15px;
+
+  /* A subtle border that matches the neon theme */
+  border: 1px solid rgba(0, 242, 254, 0.2);
+
+  /* The glowing neon shadow effect */
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.1), 0 0 40px rgba(79, 172, 254, 0.1);
+
+  position: relative;
+}
+
+/* The section title with a consistent neon glow */
+.section-title-glow {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 5px #00f2fe, 0 0 10px #4facfe;
+}
+
+/* Styling for the main paragraph text for readability */
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #d0d0d0; /* A light grey for readability on a dark background */
+  text-align: center;
+}

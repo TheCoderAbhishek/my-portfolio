@@ -1,6 +1,8 @@
 // src/App.tsx
 import NavbarComponent from "./components/NavbarComponent";
 import Hero from "./components/Hero";
+import About from "./components/About";
+import { Container } from "react-bootstrap";
 import "./App.css";
 
 function App() {
@@ -13,6 +15,15 @@ function App() {
       <main>
         {/* The Hero section is the first thing users see */}
         <Hero />
+
+        {/* A container for the rest of the sections to provide padding and alignment */}
+        <Container className="py-5">
+          <About />
+          {/* <Experience />
+          <Skills />
+          <Projects />
+          <Contact /> */}
+        </Container>
       </main>
     </>
   );
