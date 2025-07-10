@@ -1,8 +1,6 @@
 // components/Projects.tsx
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { ExternalLink, Github, Layers } from "lucide-react";
-
-// Import the custom CSS for the Projects section
 import "../style/Projects.css";
 
 // Define a type for a single project for type safety
@@ -11,56 +9,47 @@ type Project = {
   image: string;
   description: string;
   technologies: string[];
-  responsibilities: string[];
   liveLink: string;
   repoLink: string;
 };
 
-// Array of your projects
+// Your project data, extracted from your resume
 const projectData: Project[] = [
   {
-    title: "QuantumLeap CRM",
-    image: "https://placehold.co/600x400/1A1A2E/00F2FE?text=Project+Image",
+    title: "Manufacturing Execution System (MES)",
+    image: "https://placehold.co/600x400/161621/7A5AF8?text=MES+Dashboard+UI",
     description:
-      "A comprehensive Customer Relationship Management dashboard designed to streamline sales and marketing workflows with real-time data analytics.",
-    technologies: [
-      "React",
-      "TypeScript",
-      "Redux Toolkit",
-      "Node.js",
-      "Chart.js",
-      "Firebase",
-    ],
-    responsibilities: [
-      "Architected and developed the main dashboard interface from scratch.",
-      "Implemented a global state management solution using Redux Toolkit.",
-      "Designed and integrated RESTful APIs for data manipulation.",
-      "Ensured the application was fully responsive and accessible.",
-    ],
-    liveLink: "#",
-    repoLink: "#",
+      "A real-time monitoring platform for manufacturing using .NET Core APIs, React UI, SQL Server, and Azure Functions to deliver interactive dashboards and cloud-native data pipelines.",
+    technologies: ["ASP.NET Core", "EF Core", "React", "Azure", "SQL Server"],
+    liveLink: "#", // Replace with your actual link
+    repoLink: "#", // Replace with your actual link
   },
   {
-    title: "Project Phoenix",
-    image: "https://placehold.co/600x400/1A1A2E/A18CD1?text=Project+Image",
+    title: "Transparent Data Encryption (TDE)",
+    image:
+      "https://placehold.co/600x400/161621/FFFFFF?text=Data+Encryption+Concept",
     description:
-      "An e-commerce platform with a custom-built CMS, focusing on high performance and a seamless user experience for both customers and administrators.",
+      "Designed and implemented TDE across databases with a .NET Core and React UI. Managed secure key storage using Azure Key Vault, AWS KMS, and GCP KMS.",
     technologies: [
+      ".NET Core",
       "React",
-      "Next.js",
-      "GraphQL",
+      "SQL Server",
       "PostgreSQL",
-      "TailwindCSS",
-      "AWS S3",
+      "Azure Key Vault",
+      "AWS KMS",
     ],
-    responsibilities: [
-      "Developed server-side rendering (SSR) with Next.js for SEO and performance.",
-      "Built a GraphQL API to handle complex data queries efficiently.",
-      "Managed product image storage and delivery using AWS S3.",
-      "Collaborated with the backend team to define API schemas.",
-    ],
-    liveLink: "#",
-    repoLink: "#",
+    liveLink: "#", // Replace with your actual link
+    repoLink: "#", // Replace with your actual link
+  },
+  {
+    title: "Customer Relationship Management (CRM)",
+    image:
+      "https://placehold.co/600x400/161621/A0A0A0?text=CRM+System+Interface",
+    description:
+      "Delivered a web-based CRM for managing the customer lifecycle, sales pipeline, and dashboards with ASP.NET Web API, React, and SQL Server.",
+    technologies: ["C#", "ASP.NET Web API", "MVC", "React", "Bootstrap"],
+    liveLink: "#", // Replace with your actual link
+    repoLink: "#", // Replace with your actual link
   },
 ];
 
@@ -71,8 +60,8 @@ function Projects() {
         <h2 className="section-title">Featured Projects</h2>
         <Row className="gy-5">
           {projectData.map((project, index) => (
-            <Col key={index} lg={6}>
-              <div className="project-card glass-panel">
+            <Col key={index} lg={6} xl={4}>
+              <div className="project-card glass-panel h-100">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -81,16 +70,18 @@ function Projects() {
                 <div className="project-details">
                   <h3 className="project-title">{project.title}</h3>
                   <p className="project-description">{project.description}</p>
-                  <h5 className="subsection-title">
-                    <Layers size={18} className="me-2" />
-                    Technologies
-                  </h5>
-                  <div className="tech-tags">
-                    {project.technologies.map((tech, i) => (
-                      <span key={i} className="tech-tag">
-                        {tech}
-                      </span>
-                    ))}
+                  <div className="project-subsection">
+                    <h5 className="subsection-title">
+                      <Layers size={18} className="me-2" />
+                      Technologies
+                    </h5>
+                    <div className="tech-tags">
+                      {project.technologies.map((tech, i) => (
+                        <span key={i} className="tech-tag">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                   <div className="project-links">
                     <Button
