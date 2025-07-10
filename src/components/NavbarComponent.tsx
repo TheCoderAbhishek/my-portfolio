@@ -16,7 +16,7 @@ export function NavbarComponent() {
           className="fw-bold d-flex align-items-center"
         >
           <Code className="me-2" />
-          Your Name
+          Abhishek Patil
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
