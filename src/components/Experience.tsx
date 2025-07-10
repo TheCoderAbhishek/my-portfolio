@@ -64,13 +64,13 @@ const experienceData: ExperienceItem[] = [
 
 function Experience() {
   return (
-    <section id="experience" className="experience-section">
+    <section id="experience" className="section-container">
       <Container>
-        <h2 className="section-title-glow text-center">Career Journey</h2>
-        <div className="timeline">
+        <h2 className="section-title">Career Journey</h2>
+        <div className="timeline-modern">
           {experienceData.map((item, index) => (
-            <div key={index} className="timeline-item">
-              <div className="timeline-content">
+            <div key={index} className="timeline-item-modern">
+              <div className="timeline-content-modern glass-panel">
                 <h3 className="role-title">
                   <Briefcase size={20} className="me-2" />
                   {item.role}
@@ -80,11 +80,9 @@ function Experience() {
                   <Calendar size={16} className="me-2" />
                   {item.duration}
                 </p>
-
                 <div className="projects-list">
                   <strong>Projects:</strong> {item.projects.join(", ")}
                 </div>
-
                 <ul className="responsibilities-list">
                   {item.responsibilities.map((point, i) => (
                     <li key={i}>

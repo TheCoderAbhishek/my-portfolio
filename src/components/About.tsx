@@ -6,17 +6,13 @@ import "../style/About.css";
 
 function About() {
   return (
-    // The main container for the About section
-    <section id="about" className="about-section">
+    <section id="about" className="section-container">
       <Container>
+        <h2 className="section-title">About Me</h2>
         <Row className="justify-content-center">
           <Col md={10} lg={8}>
-            <div className="about-panel">
-              {/* The section title with a neon glow effect */}
-              <h2 className="section-title-glow">About Me</h2>
-
-              {/* The main content paragraph */}
-              <p className="about-text">
+            <div className="glass-panel text-center">
+              <p className="lead" style={{ lineHeight: 1.8 }}>
                 As a Software Developer with four years of hands-on experience,
                 I specialize in building dynamic and responsive web applications
                 from the ground up. My passion lies in solving complex problems
