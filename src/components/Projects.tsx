@@ -1,6 +1,6 @@
 // components/Projects.tsx
 import { Container, Row, Col, Button } from "react-bootstrap";
-import { ExternalLink, Github, Layers, CheckSquare } from "lucide-react";
+import { ExternalLink, Github, Layers } from "lucide-react";
 
 // Import the custom CSS for the Projects section
 import "../style/Projects.css";
@@ -66,76 +66,55 @@ const projectData: Project[] = [
 
 function Projects() {
   return (
-    <section id="projects" className="projects-section">
+    <section id="projects" className="section-container">
       <Container>
-        <h2 className="section-title-glow text-center">Featured Projects</h2>
-
-        {projectData.map((project, index) => (
-          <div key={index} className="project-card">
-            <Row className="align-items-center">
-              <Col lg={6} className="project-image-col">
+        <h2 className="section-title">Featured Projects</h2>
+        <Row className="gy-5">
+          {projectData.map((project, index) => (
+            <Col key={index} lg={6}>
+              <div className="project-card glass-panel">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="project-image"
                 />
-              </Col>
-              <Col lg={6}>
                 <div className="project-details">
                   <h3 className="project-title">{project.title}</h3>
                   <p className="project-description">{project.description}</p>
-
-                  <div className="project-subsection">
-                    <h5 className="subsection-title">
-                      <Layers size={18} className="me-2" />
-                      Technologies Used
-                    </h5>
-                    <div className="tech-tags">
-                      {project.technologies.map((tech, i) => (
-                        <span key={i} className="tech-tag">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+                  <h5 className="subsection-title">
+                    <Layers size={18} className="me-2" />
+                    Technologies
+                  </h5>
+                  <div className="tech-tags">
+                    {project.technologies.map((tech, i) => (
+                      <span key={i} className="tech-tag">
+                        {tech}
+                      </span>
+                    ))}
                   </div>
-
-                  <div className="project-subsection">
-                    <h5 className="subsection-title">
-                      <CheckSquare size={18} className="me-2" />
-                      Key Responsibilities
-                    </h5>
-                    <ul className="responsibilities-list">
-                      {project.responsibilities.map((resp, i) => (
-                        <li key={i}>{resp}</li>
-                      ))}
-                    </ul>
-                  </div>
-
                   <div className="project-links">
                     <Button
-                      variant="outline-light"
+                      variant="primary"
                       href={project.liveLink}
                       target="_blank"
-                      className="btn-neon me-3"
+                      className="project-button"
                     >
-                      <ExternalLink size={16} className="me-2" />
-                      <span>Live Demo</span>
+                      <ExternalLink size={16} className="me-2" /> Live Demo
                     </Button>
                     <Button
-                      variant="outline-light"
+                      variant="secondary"
                       href={project.repoLink}
                       target="_blank"
-                      className="btn-neon"
+                      className="project-button-secondary"
                     >
-                      <Github size={16} className="me-2" />
-                      <span>GitHub</span>
+                      <Github size={16} className="me-2" /> GitHub
                     </Button>
                   </div>
                 </div>
-              </Col>
-            </Row>
-          </div>
-        ))}
+              </div>
+            </Col>
+          ))}
+        </Row>
       </Container>
     </section>
   );
