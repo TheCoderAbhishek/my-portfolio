@@ -1,8 +1,6 @@
 // components/Experience.tsx
 import { Container } from "react-bootstrap";
 import { Briefcase, Calendar, ChevronsRight } from "lucide-react";
-
-// Import the custom CSS for the Experience section
 import "../style/Experience.css";
 
 // Define a type for a single experience item for type safety
@@ -14,50 +12,52 @@ type ExperienceItem = {
   responsibilities: string[];
 };
 
-// Array of your 4 work experiences
+// Your work experience, extracted directly from your resume
 const experienceData: ExperienceItem[] = [
   {
-    role: "Senior Frontend Developer",
-    employer: "Innovatech Solutions, Pune",
-    duration: "Jan 2023 - Present",
-    projects: ["Project Phoenix", "QuantumLeap CRM"],
+    role: "Software Engineer OT_Ops",
+    employer: "Advanced Technologies & Solutions (AT&S)",
+    duration: "Feb 2025 - Present",
+    projects: ["MES & AES Systems"],
     responsibilities: [
-      "Led the development of a new component library in React and TypeScript, improving code reusability by 40%.",
-      "Mentored junior developers, conducting code reviews and promoting best practices in frontend development.",
-      "Optimized application performance, reducing load times by 25% through code splitting and lazy loading.",
+      "Developed robust .NET Core APIs and dynamic React dashboards using Bootstrap and WCAG standards.",
+      "Integrated real-time OT data streams with Azure App Services, Azure Functions, and AWS cloud protocols.",
+      "Achieved 99.9% system uptime by implementing SQL Server-based alerting and monitoring systems.",
+      "Ensured security for sensitive data using Azure Key Vault and AWS KMS.",
     ],
   },
   {
-    role: "Software Developer",
-    employer: "Cyberdyne Systems, Mumbai",
-    duration: "Jul 2021 - Dec 2022",
-    projects: ["Skynet Dashboard", "T-800 UI"],
+    role: "Software Developer (.NET)",
+    employer: "Jisa Softech Pvt Ltd",
+    duration: "Sep 2023 - Jan 2025",
+    projects: ["Cloud Security & Data Encryption"],
     responsibilities: [
-      "Developed and maintained user-facing features using React.js and Redux for state management.",
-      "Collaborated with UI/UX designers to translate wireframes into high-quality, responsive code.",
-      "Wrote and maintained unit and integration tests using Jest and React Testing Library.",
+      "Delivered secure full-stack solutions for encryption key lifecycle management using .NET Core and React.",
+      "Applied EF Core, LINQ, and SQL encryption techniques to enforce data compliance and security.",
+      "Mentored junior developers, contributed to sprint planning, and collaborated on system architecture.",
+      "Integrated systems across Azure, AWS, and GCP using secure APIs and key management services.",
     ],
   },
   {
-    role: "Junior Web Developer",
-    employer: "NextGen Web Services, Pune",
-    duration: "Aug 2020 - Jun 2021",
-    projects: ["E-commerce Platform V2", "Client Portal"],
+    role: "Software Engineer",
+    employer: "Persistent Systems",
+    duration: "Jul 2022 - Aug 2023",
+    projects: ["Banking CRM & Healthcare Security"],
     responsibilities: [
-      "Assisted in the development of a large-scale e-commerce platform using modern JavaScript frameworks.",
-      "Built reusable components and front-end libraries for future use.",
-      "Fixed bugs and improved application performance, contributing to a 15% increase in user satisfaction.",
+      "Built scalable React modules and REST APIs using ASP.NET MVC and Web API.",
+      "Led deployment pipelines using Azure DevOps, configured IIS, and deployed secure applications.",
+      "Contributed to critical BFSI and healthcare projects requiring secure handling of sensitive data.",
     ],
   },
   {
-    role: "Software Engineer Intern",
-    employer: "Tech Genesis, Nashik",
-    duration: "Jan 2020 - Jul 2020",
-    projects: ["Internal Analytics Tool"],
+    role: "Intern",
+    employer: "Persistent Systems",
+    duration: "Feb 2022 - Jul 2022",
+    projects: ["Data Analysis, User Management & 2FA"],
     responsibilities: [
-      "Gained practical experience with the full software development lifecycle.",
-      "Contributed to the development of an internal tool by writing and testing code.",
-      "Participated in daily stand-ups and sprint planning meetings.",
+      "Participated in full-stack development using ASP.NET Core, React, and SQL Server.",
+      "Implemented 2FA login systems, access control, and analytics queries for security.",
+      "Assisted in bug tracking and performance queries to maintain application stability.",
     ],
   },
 ];
@@ -80,9 +80,11 @@ function Experience() {
                   <Calendar size={16} className="me-2" />
                   {item.duration}
                 </p>
+
                 <div className="projects-list">
                   <strong>Projects:</strong> {item.projects.join(", ")}
                 </div>
+
                 <ul className="responsibilities-list">
                   {item.responsibilities.map((point, i) => (
                     <li key={i}>
