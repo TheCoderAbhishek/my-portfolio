@@ -1,4 +1,6 @@
-/* components/Hero.css */
+/* style/Hero.css */
+/* This file contains the updated styles for the stacked Hero layout. */
+
 .hero-section {
   min-height: 80vh;
   display: flex;
@@ -24,10 +26,19 @@
 .hero-description {
   font-size: 1.1rem;
   max-width: 600px;
+  /* Center the text on small screens and align left on large screens */
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 992px) {
+  .hero-description {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .hero-button {
-  background-color: #7a5af8; /* A modern purple */
+  background-color: #7a5af8;
   border-color: #7a5af8;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -39,9 +50,21 @@
   transform: translateY(-3px);
 }
 
+/* Styles for the social links group */
+.social-links-group {
+  /* This ensures the links are centered on small screens and aligned left on large screens */
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* Creates space between the social icons */
+}
+@media (min-width: 992px) {
+  .social-links-group {
+    justify-content: flex-start;
+  }
+}
+
 .social-link {
   color: #a0a0a0;
-  margin: 0 10px;
   transition: all 0.3s ease;
 }
 

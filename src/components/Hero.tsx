@@ -1,6 +1,7 @@
 // components/Hero.tsx
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import { Github, Linkedin, Download } from "lucide-react";
+import { SiLeetcode } from "react-icons/si";
 import "../style/Hero.css";
 
 function Hero() {
@@ -27,15 +28,21 @@ function Hero() {
               specializing in crafting scalable .NET applications and intuitive
               React interfaces.
             </p>
+
+            {/* The button is now in its own div to occupy a full row */}
             <div className="mt-4">
               <Button
                 variant="primary"
                 size="lg"
                 href="resume.pdf"
-                className="hero-button me-3"
+                className="hero-button"
               >
                 <Download className="me-2" /> Download Resume
               </Button>
+            </div>
+
+            {/* The social links are in a separate div for the next row */}
+            <div className="social-links-group mt-4">
               <a
                 href="https://github.com/TheCoderAbhishek"
                 target="_blank"
@@ -51,6 +58,15 @@ function Hero() {
                 className="social-link"
               >
                 <Linkedin size={32} />
+              </a>
+              <a
+                href="https://leetcode.com/u/InnovationWithAbhi/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+                aria-label="LeetCode Profile"
+              >
+                <SiLeetcode size={32} />
               </a>
             </div>
           </Col>
