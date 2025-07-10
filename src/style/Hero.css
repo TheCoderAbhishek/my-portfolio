@@ -1,140 +1,52 @@
 /* components/Hero.css */
-/* This file contains the styles for your futuristic, neon-themed hero section. */
-
 .hero-section {
-  background-color: #0d0d1a; /* A very dark navy-blue base */
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
-  position: relative;
-  overflow: hidden; /* Prevents scrollbars from background effects */
-  padding-top: 80px; /* Offset for the fixed navbar */
 }
 
-/* Animated gradient overlay for a dynamic background */
-.hero-background-overlay {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-      circle at 50% 50%,
-      rgba(36, 0, 70, 0.4),
-      rgba(20, 0, 40, 0) 70%
-    ),
-    radial-gradient(
-      circle at 20% 80%,
-      rgba(0, 70, 110, 0.3),
-      rgba(0, 30, 60, 0) 70%
-    ),
-    radial-gradient(
-      circle at 80% 30%,
-      rgba(70, 0, 50, 0.3),
-      rgba(40, 0, 30, 0) 70%
-    );
-  animation: pulse-background 15s ease-in-out infinite;
-  z-index: 0;
+.profile-image {
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-.hero-section .container {
-  position: relative;
-  z-index: 1; /* Ensure content is above the background overlay */
-}
-
-@keyframes pulse-background {
-  0% {
-    transform: scale(1);
-    opacity: 0.6;
-  }
-  50% {
-    transform: scale(1.1);
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0.6;
-  }
-}
-
-/* Main title with a strong neon glow */
 .hero-title {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
-  letter-spacing: 3px;
-  color: #fff;
-  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #00f2fe,
-    0 0 82px #00f2fe, 0 0 92px #00f2fe, 0 0 102px #00f2fe, 0 0 151px #00f2fe;
-  animation: flicker 1.5s infinite alternate;
+  color: #ffffff;
 }
 
-/* Subtitle with a softer glow */
 .hero-subtitle {
   font-size: 1.5rem;
-  color: #e0e0e0;
-  text-shadow: 0 0 5px #4facfe;
+  color: #a0a0a0;
 }
 
-@keyframes flicker {
-  0%,
-  18%,
-  22%,
-  25%,
-  53%,
-  57%,
-  100% {
-    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa,
-      0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
-  }
-  20%,
-  24%,
-  55% {
-    text-shadow: none;
-  }
+.hero-description {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 1rem auto 2rem auto;
 }
 
-/* Glowing border for the profile image */
-.glowing-image {
-  border-radius: 50%;
-  border: 4px solid #00f2fe;
-  box-shadow: 0 0 15px #00f2fe, 0 0 25px #00f2fe, inset 0 0 10px #00f2fe;
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
+.hero-button {
+  background-color: #7a5af8; /* A modern purple */
+  border-color: #7a5af8;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
-/* Custom neon button styling */
-.btn-neon {
-  position: relative;
-  display: inline-block;
-  padding: 15px 30px;
-  color: #00f2fe;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 1rem;
-  font-weight: bold;
-  overflow: hidden;
-  transition: 0.5s;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+.hero-button:hover {
+  background-color: #6a49e8;
+  border-color: #6a49e8;
+  transform: translateY(-3px);
 }
 
-.btn-neon:hover {
-  background: #00f2fe;
-  color: #050801;
-  box-shadow: 0 0 5px #00f2fe, 0 0 25px #00f2fe, 0 0 50px #00f2fe,
-    0 0 200px #00f2fe;
+.social-link {
+  color: #a0a0a0;
+  margin: 0 10px;
+  transition: all 0.3s ease;
 }
 
-/* Social media icons */
-.social-icons .social-icon {
-  color: #e0e0e0;
-  margin: 0 15px;
-  transition: 0.3s ease;
-}
-
-.social-icons .social-icon:hover {
-  color: #00f2fe;
-  transform: scale(1.2) translateY(-5px);
-  text-shadow: 0 0 10px #00f2fe, 0 0 20px #00f2fe;
+.social-link:hover {
+  color: #ffffff;
+  transform: translateY(-3px);
 }

@@ -5,47 +5,41 @@ import "../style/Hero.css";
 
 function Hero() {
   return (
-    // The main hero container with a custom ID for styling
-    <section id="home" className="hero-section">
-      <Container className="text-center text-white">
-        <Row className="align-items-center py-5">
+    <section id="home" className="hero-section section-container">
+      <Container>
+        <Row className="align-items-center text-center text-lg-start">
           <Col lg={4} className="mb-4 mb-lg-0">
-            {/* The image now has a glowing border class */}
             <Image
-              src="https://placehold.co/300x300/1A1A2E/E0E0E0?text=Your+Photo"
+              src="https://placehold.co/300x300/161621/FFFFFF?text=Your+Photo"
               alt="Your Name"
-              className="glowing-image"
+              roundedCircle
+              fluid
+              className="profile-image"
             />
           </Col>
           <Col lg={8}>
-            {/* The main title with a neon glow effect */}
-            <h1 className="hero-title">YOUR NAME</h1>
-
-            {/* The subtitle with a secondary neon glow */}
+            <h1 className="hero-title">Your Name</h1>
             <p className="hero-subtitle">
               Software Developer | Full Stack Engineer
             </p>
-
-            {/* Action buttons with custom neon styling */}
+            <p className="hero-description">
+              Passionate about building scalable web applications and creating
+              great user experiences.
+            </p>
             <div className="mt-4">
               <Button
-                variant="outline-light"
+                variant="primary"
                 size="lg"
                 href="/resume.pdf"
-                className="btn-neon me-3"
+                className="hero-button me-3"
               >
-                <Download className="me-2" />
-                <span>Download Resume</span>
+                <Download className="me-2" /> Download Resume
               </Button>
-            </div>
-
-            {/* Social media icons with glowing hover effects */}
-            <div className="social-icons mt-4">
               <a
                 href="https://github.com/your-username"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="social-icon"
+                className="social-link"
               >
                 <Github size={32} />
               </a>
@@ -53,7 +47,7 @@ function Hero() {
                 href="https://linkedin.com/in/your-username"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="social-icon"
+                className="social-link"
               >
                 <Linkedin size={32} />
               </a>
@@ -61,8 +55,6 @@ function Hero() {
           </Col>
         </Row>
       </Container>
-      {/* An empty div for the animated background gradient overlay */}
-      <div className="hero-background-overlay"></div>
     </section>
   );
 }
