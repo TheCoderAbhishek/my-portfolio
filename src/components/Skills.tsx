@@ -23,7 +23,7 @@ import "../style/Skills.css";
 // Define a type for a single skill, now including an icon
 type Skill = {
   name: string;
-  icon: JSX.Element;
+  icon: React.JSX.Element;
 };
 
 // Define a type for a skill category
