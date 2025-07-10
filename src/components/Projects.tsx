@@ -17,7 +17,7 @@ type Project = {
 const projectData: Project[] = [
   {
     title: "Manufacturing Execution System (MES)",
-    image: "https://placehold.co/600x400/161621/7A5AF8?text=MES+Dashboard+UI",
+    image: "mes.png",
     description:
       "A real-time monitoring platform for manufacturing using .NET Core APIs, React UI, SQL Server, and Azure Functions to deliver interactive dashboards and cloud-native data pipelines.",
     technologies: ["ASP.NET Core", "EF Core", "React", "Azure", "SQL Server"],
@@ -26,8 +26,7 @@ const projectData: Project[] = [
   },
   {
     title: "Transparent Data Encryption (TDE)",
-    image:
-      "https://placehold.co/600x400/161621/FFFFFF?text=Data+Encryption+Concept",
+    image: "tde.png",
     description:
       "Designed and implemented TDE across databases with a .NET Core and React UI. Managed secure key storage using Azure Key Vault, AWS KMS, and GCP KMS.",
     technologies: [
@@ -43,8 +42,7 @@ const projectData: Project[] = [
   },
   {
     title: "Customer Relationship Management (CRM)",
-    image:
-      "https://placehold.co/600x400/161621/A0A0A0?text=CRM+System+Interface",
+    image: "crm.png",
     description:
       "Delivered a web-based CRM for managing the customer lifecycle, sales pipeline, and dashboards with ASP.NET Web API, React, and SQL Server.",
     technologies: ["C#", "ASP.NET Web API", "MVC", "React", "Bootstrap"],
