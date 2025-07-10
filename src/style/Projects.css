@@ -1,35 +1,56 @@
+/* components/Projects.css */
 .project-card {
   padding: 0;
   overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Ensures footer buttons align nicely */
 }
+
 .project-image {
   width: 100%;
+  aspect-ratio: 16 / 9; /* Ensures all images have a consistent shape */
+  object-fit: cover;
   border-radius: 16px 16px 0 0;
 }
+
 .project-details {
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allows this section to grow and push the footer down */
 }
+
 .project-title {
   font-size: 1.5rem;
   color: #ffffff;
   margin-bottom: 1rem;
 }
+
 .project-description {
   font-size: 1rem;
   color: #a0a0a0;
   margin-bottom: 1.5rem;
+  flex-grow: 1; /* Allows description to take up available space */
 }
+
+.project-subsection {
+  margin-bottom: 1.5rem;
+}
+
 .subsection-title {
   font-size: 1rem;
   color: #ffffff;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
 }
+
 .tech-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 1.5rem;
 }
+
 .tech-tag {
   background-color: rgba(255, 255, 255, 0.1);
   color: #e0e0e0;
@@ -37,17 +58,32 @@
   border-radius: 20px;
   font-size: 0.8rem;
 }
+
 .project-links {
   display: flex;
   gap: 1rem;
+  margin-top: auto; /* Pushes the buttons to the bottom of the card */
 }
+
 .project-button {
   background-color: #7a5af8;
   border: none;
   font-weight: 500;
+  width: 50%;
+  transition: all 0.3s ease;
 }
+.project-button:hover {
+  background-color: #6a49e8;
+  transform: translateY(-2px);
+}
+
 .project-button-secondary {
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
   font-weight: 500;
+  width: 50%;
+  transition: all 0.3s ease;
+}
+.project-button-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }

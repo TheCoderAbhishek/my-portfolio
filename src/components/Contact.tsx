@@ -1,8 +1,7 @@
 // components/Contact.tsx
-import { Container, Row, Col, Button } from "react-bootstrap";
-import { Mail } from "lucide-react";
-
-// Import the custom CSS for the Contact section
+import { Container, Row, Col } from "react-bootstrap";
+import { Mail, MapPin, Github, Linkedin } from "lucide-react";
+import { SiLeetcode } from "react-icons/si";
 import "../style/Contact.css";
 
 function Contact() {
@@ -13,28 +12,57 @@ function Contact() {
         <Row className="justify-content-center">
           <Col md={10} lg={8}>
             <div className="glass-panel text-center">
-              <p className="lead mb-4">
-                I'm currently open to new opportunities. My inbox is always
-                open, whether you have a question or just want to say hi, I'll
-                get back to you!
+              <p className="contact-intro">
+                I'm currently seeking new opportunities and welcome any chance
+                to connect. Whether you have a question, a project proposal, or
+                just want to say hello, my inbox is always open.
               </p>
-              <div className="d-flex justify-content-center align-items-center mb-4">
-                <Mail size={20} className="me-2" style={{ color: "#7A5AF8" }} />
+
+              <div className="contact-details">
+                <div className="contact-item">
+                  <Mail size={20} className="contact-icon" />
+                  <a
+                    href="mailto:patil.abhishek.66333@gmail.com"
+                    className="contact-link-modern"
+                  >
+                    patil.abhishek.66333@gmail.com
+                  </a>
+                </div>
+                <div className="contact-item">
+                  <MapPin size={20} className="contact-icon" />
+                  <span>Pune, MH, India</span>
+                </div>
+              </div>
+
+              <div className="contact-social-links">
                 <a
-                  href="mailto:your.email@example.com"
-                  className="contact-link-modern"
+                  href="https://github.com/TheCoderAbhishek"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                  aria-label="GitHub Profile"
                 >
-                  your.email@example.com
+                  <Github size={28} />
+                </a>
+                <a
+                  href="https://linkedin.com/in/yuvraj96k"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                  aria-label="LinkedIn Profile"
+                >
+                  <Linkedin size={28} />
+                </a>
+                <a
+                  href="https://leetcode.com/your-username/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                  aria-label="LeetCode Profile"
+                >
+                  <SiLeetcode size={28} />
                 </a>
               </div>
-              <Button
-                variant="primary"
-                size="lg"
-                href="mailto:your.email@example.com"
-                className="hero-button"
-              >
-                Say Hello
-              </Button>
             </div>
           </Col>
         </Row>
