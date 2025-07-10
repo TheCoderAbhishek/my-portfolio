@@ -1,45 +1,48 @@
 /* App.css */
-/* This file contains global styles and overrides for your portfolio. */
+/* This file contains the global base styles for your modern portfolio. */
 
-/* Use a modern, clean font */
+/* Import the 'Inter' font from Google Fonts */
+@import url("[https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap)");
+
+/* Set the base theme for the entire application */
 body {
   font-family: "Inter", sans-serif;
-  background-color: #f8f9fa; /* A light grey background for a clean look */
-  color: #212529; /* Standard dark text for readability */
+  /* A sophisticated dark background */
+  background-color: #0a0a10;
+  color: #e0e0e0; /* A light default text color for readability */
+  overflow-x: hidden; /* Prevents accidental horizontal scrolling */
 }
 
-/* Add spacing between sections for better visual separation */
-.section {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  border-bottom: 1px solid #e9ecef; /* A subtle line to separate sections */
+/* Base style for all sections to ensure consistent spacing */
+.section-container {
+  padding: 6rem 1rem;
+  position: relative;
+  overflow: hidden;
 }
 
-.section:last-of-type {
-  border-bottom: none;
-}
-
-/* Style for section headings */
+/* A consistent style for all main section titles */
 .section-title {
-  font-weight: 700;
   font-size: 2.5rem;
-  margin-bottom: 3rem;
+  font-weight: 700;
+  color: #ffffff;
   text-align: center;
-  color: #343a40;
+  margin-bottom: 4rem;
+  letter-spacing: 1px;
 }
 
-/* Custom button styling to make them pop a bit more */
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+/* A unified style for the glass-like panels used across the site */
+.glass-panel {
+  background: rgba(22, 22, 33, 0.6); /* Semi-transparent dark blue */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem;
+  transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
-}
-
-.btn-outline-light {
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+.glass-panel:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }

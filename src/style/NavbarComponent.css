@@ -1,86 +1,24 @@
 /* components/Navbar.css */
-/* This file contains the styles for your futuristic, neon-themed navbar. */
-
-/* Main navbar container */
-.navbar-futuristic {
-  /* Semi-transparent dark background */
-  background-color: rgba(10, 10, 20, 0.75) !important;
-  /* Glassmorphism blur effect */
+.navbar-modern {
+  background-color: rgba(
+    10,
+    10,
+    16,
+    0.75
+  ); /* Dark, semi-transparent background */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-
-  /* Remove the default Bootstrap border */
-  border-bottom: none;
-
-  /* Positioning for the pseudo-element border */
-  position: relative;
-  padding-bottom: 2px; /* Space for the gradient line */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 0;
 }
 
-/* The glowing gradient border */
-.navbar-futuristic::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-
-  /* The neon gradient */
-  background: linear-gradient(
-    90deg,
-    #00f2fe,
-    #4facfe,
-    #a18cd1,
-    #fbc2eb,
-    #ff8cce
-  );
-
-  /* A subtle glow for the border */
-  box-shadow: 0 0 10px #4facfe, 0 0 20px #a18cd1;
-
-  /* Animation to make the gradient move */
-  background-size: 200% 200%;
-  animation: gradient-animation 5s ease infinite;
-}
-
-/* Keyframe animation for the moving gradient */
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Glowing effect for the brand text */
-.navbar-brand-glow {
-  color: #fff !important;
-  font-weight: bold;
-  text-shadow: 0 0 5px #fff, 0 0 10px #00f2fe;
-  transition: text-shadow 0.3s ease;
-}
-
-.navbar-brand-glow:hover {
-  text-shadow: 0 0 10px #fff, 0 0 20px #00f2fe, 0 0 30px #4facfe;
-}
-
-/* Glowing effect for nav links */
-.nav-link-glow {
-  color: #e0e0e0 !important; /* Slightly off-white for a softer look */
+.navbar-modern .nav-link {
+  color: #e0e0e0;
   font-weight: 500;
-  text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-  margin: 0 0.5rem; /* Add some spacing between links */
+  transition: color 0.3s ease;
 }
 
-.nav-link-glow:hover,
-.nav-link-glow:focus,
-.nav-link-glow.active {
-  color: #fff !important;
-  text-shadow: 0 0 8px #00f2fe, 0 0 15px #4facfe;
+.navbar-modern .nav-link:hover,
+.navbar-modern .nav-link.active {
+  color: #ffffff;
 }

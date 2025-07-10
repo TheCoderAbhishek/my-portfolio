@@ -7,33 +7,27 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import { Container } from "react-bootstrap";
 import "./App.css";
 
 function App() {
   return (
-    <>
-      {/* The Navbar is fixed at the top */}
+    <div className="app-container">
+      {/* The Navbar now scrolls with the page */}
       <NavbarComponent />
 
-      {/* The main content area of the portfolio */}
+      {/* The main content area */}
       <main>
-        {/* The Hero section is the first thing users see */}
         <Hero />
-
-        {/* A container for the rest of the sections to provide padding and alignment */}
-        <Container className="py-5">
-          <About />
-          <Experience />
-          <Skills />
-          <Projects />
-          <Contact />
-        </Container>
+        <About />
+        <Experience />
+        <Skills />
+        <Projects />
+        <Contact />
       </main>
 
-      {/* The Footer appears at the bottom of the page */}
+      {/* The Footer at the bottom */}
       <Footer />
-    </>
+    </div>
   );
 }
 
