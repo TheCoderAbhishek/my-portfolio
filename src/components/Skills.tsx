@@ -80,27 +80,28 @@ const skillData: SkillCategory[] = [
 
 function Skills() {
   return (
-    <section id="skills" className="skills-section">
+    <section id="skills" className="section-container">
       <Container>
-        <h2 className="section-title-glow text-center">Technical Arsenal</h2>
-
-        <Row className="gy-5">
-          {skillData.map((category, index) => (
-            <Col key={index} md={6} lg={6}>
-              <div className="skill-category-panel">
-                <h3 className="category-title">{category.title}</h3>
-                <div className="skills-grid">
-                  {category.skills.map((skill, i) => (
-                    <div key={i} className="skill-item">
-                      {skill.icon}
-                      <span className="skill-name">{skill.name}</span>
-                    </div>
-                  ))}
+        <h2 className="section-title">Technical Arsenal</h2>
+        <div className="glass-panel">
+          <Row className="gy-4">
+            {skillData.map((category, index) => (
+              <Col key={index} md={6} lg={4}>
+                <div className="skill-category">
+                  <h3 className="category-title">{category.title}</h3>
+                  <div className="skills-grid">
+                    {category.skills.map((skill, i) => (
+                      <div key={i} className="skill-item">
+                        {skill.icon}
+                        <span className="skill-name">{skill.name}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </Col>
-          ))}
-        </Row>
+              </Col>
+            ))}
+          </Row>
+        </div>
       </Container>
     </section>
   );
