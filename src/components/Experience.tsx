@@ -1,4 +1,3 @@
-// components/Experience.tsx
 import { Container } from "react-bootstrap";
 import { Briefcase, Calendar, ChevronsRight } from "lucide-react";
 import "../style/Experience.css";

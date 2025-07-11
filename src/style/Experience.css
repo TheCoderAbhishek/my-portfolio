@@ -1,32 +1,39 @@
-/* components/Experience.css */
-.timeline-modern {
-  position: relative;
-  max-width: 900px;
-  margin: 0 auto;
+/* style/Experience.css */
+/* This file has been updated with a robust desktop layout. */
+
+:root {
+  --timeline-line-color: rgba(255, 255, 255, 0.1);
+  --timeline-dot-color: #7a5af8;
+  --timeline-card-padding: 1.5rem;
+  --timeline-spacing: 2.5rem;
 }
 
+.timeline-modern {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* --- Mobile-First Styles (Single Column) --- */
 .timeline-modern::after {
   content: "";
   position: absolute;
   width: 2px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--timeline-line-color);
   top: 0;
   bottom: 0;
-  left: 50%;
+  left: 15px;
   margin-left: -1px;
 }
 
 .timeline-item-modern {
-  padding: 10px 40px;
   position: relative;
-  width: 50%;
-}
-
-.timeline-item-modern:nth-child(odd) {
-  left: 0;
-}
-.timeline-item-modern:nth-child(even) {
-  left: 50%;
+  width: 100%;
+  padding-left: calc(15px + var(--timeline-spacing));
+  padding-right: 1rem;
+  margin-bottom: 3rem;
 }
 
 .timeline-item-modern::after {
@@ -34,65 +41,121 @@
   position: absolute;
   width: 16px;
   height: 16px;
-  right: -8px;
+  left: 15px;
+  transform: translateX(-50%);
   background-color: #0a0a10;
-  border: 3px solid #7a5af8;
-  top: 25px;
+  border: 3px solid var(--timeline-dot-color);
+  top: calc(var(--timeline-card-padding) + 0.5rem);
   border-radius: 50%;
   z-index: 1;
 }
 
-.timeline-item-modern:nth-child(even)::after {
-  left: -8px;
+.timeline-content-modern {
+  position: relative; /* Needed for the pointer pseudo-element */
 }
 
-.timeline-content-modern {
-  padding: 1.5rem;
+/* --- Desktop Styles (Two-Column) --- */
+@media screen and (min-width: 768px) {
+  .timeline-modern::after {
+    left: 50%; /* Center the timeline bar */
+  }
+
+  .timeline-item-modern {
+    width: 50%;
+    padding-left: var(--timeline-spacing);
+    padding-right: 0;
+  }
+
+  .timeline-item-modern:nth-child(odd) {
+    left: 0;
+    padding-right: var(--timeline-spacing);
+    padding-left: 0;
+  }
+
+  .timeline-item-modern:nth-child(even) {
+    left: 50%;
+  }
+
+  .timeline-item-modern:nth-child(odd)::after {
+    left: auto;
+    right: calc(-1 * var(--timeline-spacing));
+    transform: translateX(50%);
+  }
+
+  .timeline-item-modern:nth-child(even)::after {
+    left: calc(-1 * var(--timeline-spacing));
+    transform: translateX(-50%);
+  }
+
+  /* The new visual pointer/arrow for desktop */
+  .timeline-content-modern::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: calc(var(--timeline-card-padding) + 0.5rem);
+    width: 0;
+    z-index: 1;
+    border: medium solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Position the pointer for items on the right */
+  .timeline-item-modern:nth-child(even) .timeline-content-modern::before {
+    left: -15px;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgba(255, 255, 255, 0.1) transparent transparent;
+  }
+
+  /* Position the pointer for items on the left */
+  .timeline-item-modern:nth-child(odd) .timeline-content-modern::before {
+    right: -15px;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0.1);
+  }
 }
+
+/* --- Consistent Content Styles --- */
 .role-title {
   font-size: 1.5rem;
+  font-weight: 600;
   color: #ffffff;
+  display: flex;
+  align-items: center;
 }
 .employer-name {
   font-size: 1.1rem;
   color: #a0a0a0;
+  margin-top: 0.25rem;
 }
 .duration {
   font-size: 0.9rem;
   color: #888;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
 }
 .projects-list {
   font-size: 1rem;
-  color: #7a5af8;
-  margin-top: 1rem;
+  color: var(--timeline-dot-color);
+  font-weight: 500;
+  margin-top: 1.5rem;
+  border-left: 3px solid var(--timeline-dot-color);
+  padding-left: 10px;
 }
 .responsibilities-list {
   list-style: none;
   padding-left: 0;
   margin-top: 1rem;
+  color: #e0e0e0;
 }
 .responsibilities-list li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   display: flex;
+  align-items: flex-start;
+  line-height: 1.6;
 }
 .bullet-icon {
-  color: #7a5af8;
+  color: var(--timeline-dot-color);
   margin-right: 10px;
-}
-
-@media screen and (max-width: 768px) {
-  .timeline-modern::after {
-    left: 31px;
-  }
-  .timeline-item-modern {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-  }
-  .timeline-item-modern:nth-child(even) {
-    left: 0;
-  }
-  .timeline-item-modern::after {
-    left: 23px;
-  }
+  flex-shrink: 0;
+  margin-top: 5px;
 }
