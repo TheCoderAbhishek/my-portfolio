@@ -1,8 +1,10 @@
+// src/components/Experience.tsx (Final Code)
+
 import { Container } from "react-bootstrap";
 import { Briefcase, Calendar, ChevronsRight } from "lucide-react";
+import { motion, type Variants } from "framer-motion";
 import "../style/Experience.css";
 
-// Define a type for a single experience item for type safety
 type ExperienceItem = {
   role: string;
   employer: string;
@@ -11,7 +13,6 @@ type ExperienceItem = {
   responsibilities: string[];
 };
 
-// Your work experience, extracted directly from your resume
 const experienceData: ExperienceItem[] = [
   {
     role: "Software Engineer OT_Ops",
@@ -61,14 +62,54 @@ const experienceData: ExperienceItem[] = [
   },
 ];
 
+// --- Animation Variants ---
+const timelineContainerVariant: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const itemVariantLeft: Variants = {
+  hidden: { x: -100, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
+
+const itemVariantRight: Variants = {
+  hidden: { x: 100, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
+// -------------------------
+
 function Experience() {
   return (
     <section id="experience" className="section-container">
       <Container>
         <h2 className="section-title">Career Journey</h2>
-        <div className="timeline-modern">
+        <motion.div
+          className="timeline-modern"
+          variants={timelineContainerVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
           {experienceData.map((item, index) => (
-            <div key={index} className="timeline-item-modern">
+            <motion.div
+              key={index}
+              className="timeline-item-modern"
+              variants={index % 2 === 0 ? itemVariantLeft : itemVariantRight}
+            >
               <div className="timeline-content-modern glass-panel">
                 <h3 className="role-title">
                   <Briefcase size={20} className="me-2" />
@@ -79,11 +120,9 @@ function Experience() {
                   <Calendar size={16} className="me-2" />
                   {item.duration}
                 </p>
-
                 <div className="projects-list">
                   <strong>Projects:</strong> {item.projects.join(", ")}
                 </div>
-
                 <ul className="responsibilities-list">
                   {item.responsibilities.map((point, i) => (
                     <li key={i}>
@@ -93,9 +132,9 @@ function Experience() {
                   ))}
                 </ul>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </Container>
     </section>
   );
