@@ -8,24 +8,32 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import "./App.css";
+import AnimatedSection from "./components/AnimatedSection";
 
 function App() {
   return (
     <div className="app-container">
-      {/* The Navbar now scrolls with the page */}
       <NavbarComponent />
-
-      {/* The main content area */}
       <main>
+        {/* Hero can be animated differently or not at all */}
         <Hero />
-        <About />
-        <Experience />
-        <Skills />
-        <Projects />
-        <Contact />
-      </main>
 
-      {/* The Footer at the bottom */}
+        <AnimatedSection>
+          <About />
+        </AnimatedSection>
+        <AnimatedSection>
+          <Experience />
+        </AnimatedSection>
+        <AnimatedSection>
+          <Skills />
+        </AnimatedSection>
+        <AnimatedSection>
+          <Projects />
+        </AnimatedSection>
+        <AnimatedSection>
+          <Contact />
+        </AnimatedSection>
+      </main>
       <Footer />
     </div>
   );
