@@ -1,16 +1,16 @@
 // src/components/AnimatedSection.tsx (Corrected)
 
 import { motion, useInView } from "framer-motion";
-// Change is on this line: added 'type' before ReactNode
 import { useRef, type ReactNode } from "react";
 
+// 1. Update the Props interface
 interface Props {
   children: ReactNode;
+  onViewportEnter?: () => void; // Make the prop optional
 }
 
-const AnimatedSection = ({ children }: Props) => {
+const AnimatedSection = ({ children, onViewportEnter }: Props) => {
   const ref = useRef(null);
-  // The 'amount' property ensures the animation triggers when 20% of the element is visible
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   const sectionVariants = {
@@ -25,6 +25,7 @@ const AnimatedSection = ({ children }: Props) => {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       transition={{ duration: 0.6, ease: "easeOut" }}
+      onViewportEnter={onViewportEnter} // 2. Apply the prop here
     >
       {children}
     </motion.section>

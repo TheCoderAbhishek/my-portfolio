@@ -1,4 +1,6 @@
-// src/App.tsx
+// src/App.tsx (Corrected)
+
+import { useState } from "react";
 import NavbarComponent from "./components/NavbarComponent";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -11,26 +13,32 @@ import "./App.css";
 import AnimatedSection from "./components/AnimatedSection";
 
 function App() {
+  const [activeSection, setActiveSection] = useState("home");
+
   return (
     <div className="app-container">
-      <NavbarComponent />
+      <NavbarComponent activeSection={activeSection} />
       <main>
-        {/* Hero can be animated differently or not at all */}
-        <Hero />
+        <Hero onViewportEnter={() => setActiveSection("home")} />
 
-        <AnimatedSection>
+        {/* Pass the prop to the AnimatedSection wrapper, NOT the component inside */}
+        <AnimatedSection onViewportEnter={() => setActiveSection("about")}>
           <About />
         </AnimatedSection>
-        <AnimatedSection>
+
+        <AnimatedSection onViewportEnter={() => setActiveSection("experience")}>
           <Experience />
         </AnimatedSection>
-        <AnimatedSection>
+
+        <AnimatedSection onViewportEnter={() => setActiveSection("skills")}>
           <Skills />
         </AnimatedSection>
-        <AnimatedSection>
+
+        <AnimatedSection onViewportEnter={() => setActiveSection("projects")}>
           <Projects />
         </AnimatedSection>
-        <AnimatedSection>
+
+        <AnimatedSection onViewportEnter={() => setActiveSection("contact")}>
           <Contact />
         </AnimatedSection>
       </main>
