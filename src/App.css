@@ -7,10 +7,9 @@
 /* Set the base theme for the entire application */
 body {
   font-family: "Inter", sans-serif;
-  /* A sophisticated dark background */
   background-color: #0a0a10;
-  color: #e0e0e0; /* A light default text color for readability */
-  overflow-x: hidden; /* Prevents accidental horizontal scrolling */
+  color: #e0e0e0;
+  overflow-x: hidden;
 }
 
 /* Base style for all sections to ensure consistent spacing */
@@ -32,7 +31,7 @@ body {
 
 /* A unified style for the glass-like panels used across the site */
 .glass-panel {
-  background: rgba(22, 22, 33, 0.6); /* Semi-transparent dark blue */
+  background: rgba(22, 22, 33, 0.6);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 16px;

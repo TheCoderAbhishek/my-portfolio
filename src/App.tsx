@@ -1,5 +1,3 @@
-// src/App.tsx (Corrected)
-
 import { useState } from "react";
 import NavbarComponent from "./components/NavbarComponent";
 import Hero from "./components/Hero";
@@ -21,7 +19,6 @@ function App() {
       <main>
         <Hero onViewportEnter={() => setActiveSection("home")} />
 
-        {/* Pass the prop to the AnimatedSection wrapper, NOT the component inside */}
         <AnimatedSection onViewportEnter={() => setActiveSection("about")}>
           <About />
         </AnimatedSection>
