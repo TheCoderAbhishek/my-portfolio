@@ -15,9 +15,21 @@ type ExperienceItem = {
 
 const experienceData: ExperienceItem[] = [
   {
+    role: "Software Consultant - Backend",
+    employer: "ParentPay Group",
+    duration: "Aug 2025 - Present",
+    projects: ["Education (School) Domain"],
+    responsibilities: [
+      "Designed and delivered scalable .NET Core APIs alongside React-based dashboards, ensuring responsive UI design and compliance with Bootstrap and WCAG accessibility standards.",
+      "Integrated real-time operational data streams using Azure App Services, Azure Functions, and AWS cloud services to support high-availability backend systems.",
+      "Improved platform reliability to 99.9% uptime by implementing proactive SQL Server monitoring, alerting, and performance tuning.",
+      "Secured sensitive educational data through robust secrets management and encryption, leveraging Azure Key Vault and AWS KMS.",
+    ],
+  },
+  {
     role: "Software Engineer OT_Ops",
     employer: "Advanced Technologies & Solutions (AT&S)",
-    duration: "Feb 2025 - Present",
+    duration: "Feb 2025 - Aug 2025",
     projects: ["MES & AES Systems"],
     responsibilities: [
       "Developed robust .NET Core APIs and dynamic React dashboards using Bootstrap and WCAG standards.",
