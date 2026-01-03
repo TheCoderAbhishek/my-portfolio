@@ -77,7 +77,7 @@ function Hero({ onViewportEnter }: HeroProps) {
             >
               {/* Each child inside gets the 'itemVariants' */}
               <motion.h1 variants={itemVariants} className="hero-title">
-                Abhishek Patil
+                Abhishek Hanumant Patil
               </motion.h1>
 
               <motion.p variants={itemVariants} className="hero-subtitle">
