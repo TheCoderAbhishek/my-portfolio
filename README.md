@@ -210,9 +210,6 @@ You are free to fork and customize it for your own portfolio, but please avoid d
 ⭐ If you like this project, consider starring the repository!
 
 ```
-
----
-
 If you want next, I can:
 - Add a **“Design Decisions”** section
 - Add a **“What recruiters should notice”** section
