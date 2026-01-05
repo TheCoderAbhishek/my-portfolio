@@ -211,10 +211,10 @@ You are free to fork and customize it for your own portfolio, but please avoid d
 
 ```
 If you want next, I can:
-- Add a **“Design Decisions”** section
-- Add a **“What recruiters should notice”** section
-- Make a **short ATS-friendly README**
-- Add **screenshots + badges**
+- Add a “Design Decisions” section
+- Add a “What recruiters should notice” section
+- Make a short ATS-friendly README
+- Add screenshots + badges
 
 But structurally, this README is now **complete, professional, and production-grade**.
 ```
