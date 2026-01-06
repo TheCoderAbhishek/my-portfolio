@@ -96,7 +96,7 @@ my-portfolio/
   * Update navbar state based on scroll position
 * State flow is **simple, predictable, and local**, avoiding unnecessary global state
 
-This architecture prioritizes **readability, scalability, and maintainability**.
+This architecture prioritises **readability, scalability, and maintainability**.
 
 ---
 
@@ -116,10 +116,10 @@ Animations are implemented using **Framer Motion**:
 
 * Global styles defined in `App.css`
 * Section-specific styles under `src/style`
-* Dark UI theme with accent color `#7a5af8`
+* Dark UI theme with accent colour `#7a5af8`
 * Glassmorphism effect using `backdrop-filter`
 * Bootstrap grid system for responsive layouts
-* CSS kept modular and readable for easy customization
+* CSS kept modular and readable for easy customisation
 
 ---
 
@@ -205,7 +205,7 @@ Full Stack Developer (.NET & React)
 ## 📄 License
 
 This is a **personal portfolio project**.
-You are free to fork and customize it for your own portfolio, but please avoid direct content plagiarism.
+You are free to fork and customise it for your own portfolio, but please avoid direct content plagiarism.
 
 ⭐ If you like this project, consider starring the repository!
 
